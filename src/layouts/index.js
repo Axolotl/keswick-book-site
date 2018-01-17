@@ -18,7 +18,19 @@ const TemplateWrapper = ({ children }) => (
     />
     <Sidebar />
     <div id="content" className="column">
-      {children()}
+      <div className="section">
+        <a id="main-content"></a>
+        <div className="tabs"></div> 
+        <div className="region region-content">
+          <div id="block-system-main" className="block block-system">
+            <div className="content">
+              <div id="node-1" className="node node-page clearfix" about="/content/homepage" typeof="foaf:Document">
+                {children()}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 )

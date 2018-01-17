@@ -9,7 +9,7 @@ const Sidebar = () => (
 
       <div id="logo">
         <div className="section clearfix">
-          <a id="logo" href="" title="Home" rel="home">
+          <a id="logo" href="/" title="Home" rel="home">
             <img src={logo} alt="Home" />
           </a>
         </div>
