@@ -1,3 +1,10 @@
+The Story of Keswick Hall
+Rebuild of Website
+
+-------------------
+
+Info for Gatsby below:
+
 # gatsby-starter-default
 The default Gatsby starter
 
