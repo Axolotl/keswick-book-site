@@ -3,6 +3,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import imagehead from '../images/content/R-01-3.jpg'
+
 const IndexPage = () => (
   <div className="section">
     <a id="main-content"></a>
@@ -16,7 +18,7 @@ const IndexPage = () => (
               <div className="field field-name-field-page-image field-type-image field-label-hidden">
                 <div className="field-items">
                   <div className="field-item even">
-                    <img typeof="foaf:Image" src="http://storyofkeswick.com/sites/default/files/styles/page_header/public/R-01-3.jpg" alt="The Story of Keswick Hall" title="The Story of Keswick Hall" />
+                    <img typeof="foaf:Image" src={imagehead} alt="The Story of Keswick Hall" title="The Story of Keswick Hall" />
                   </div>
                 </div>
               </div>

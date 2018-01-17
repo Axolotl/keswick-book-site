@@ -224,7 +224,7 @@ body {
   margin: 10px 0;
 }
 #sidebar ul li.leaf.active, #sidebar ul li.expanded.active, #sidebar ul li.leaf:hover, #sidebar ul li.expanded:hover {
-  /*list-style-image:url("images/disc.png");*/
+  list-style-image:url("../images/design/disc.png");
   list-style-type:square;
 }
 #sidebar ul li.leaf {

@@ -1,13 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import logo from '../../images/design/logo-light_2.png'
+
 const Sidebar = () => (
   <div id="sidebar" className="column sidebar">
     <div className="section">
 
       <div id="logo">
         <div className="section clearfix">
-          <a id="logo" href="" title="Home" rel="home" />
+          <a id="logo" href="" title="Home" rel="home">
+            <img src={logo} alt="Home" />
+          </a>
         </div>
       </div>
 
