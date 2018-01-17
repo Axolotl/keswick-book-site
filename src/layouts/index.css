@@ -264,7 +264,7 @@ body {
 /* node styles for display in views */
 .node h2 {
   font: 20px/1.2 "Quattrocento", sans-serif;
-  /*background: url("images/disc-green.png") no-repeat scroll left center transparent;*/
+  background: url("../images/design/disc-green.png") no-repeat scroll left center transparent;
   padding: 0 0 0 35px;
 }
 .node h2 a {
@@ -295,7 +295,7 @@ body {
   margin: 0 auto 60px;
   padding: 0 0 20px;
   text-align: center;
-  /*background: url("images/separator-grad.jpg") no-repeat scroll center bottom transparent;*/
+  background: url("../images/design/separator-grad.jpg") no-repeat scroll center bottom transparent;
   height: 36px;
 }
 .node ul.links li {

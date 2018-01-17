@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BAandAP = () => ( 
-  <div className="content">
+  <div className="content node-type-historical-content">
     <div id="node-7" className="node node-historical-content clearfix" about="/content/ba-and-ap" typeof="sioc:Item foaf:Document">
       <h2 property="dc:title" datatype="">
         <a href="/content/ba-and-ap">BA and AP</a>
