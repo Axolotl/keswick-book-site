@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Sidebar />
-    <div id="content" class="column">
+    <div id="content" className="column">
       {children()}
     </div>
   </div>
