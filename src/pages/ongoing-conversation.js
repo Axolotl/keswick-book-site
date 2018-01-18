@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 
 export default function OngoingConversation({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
+  console.log(posts);
   return (
     <div className="content node-type-historical-content">
       <div className="view view-ongoing-conversation view-id-ongoing_conversation view-display-id-page view-dom-id-1">
@@ -11,7 +12,6 @@ export default function OngoingConversation({ data }) {
             .filter(post => post.node.frontmatter.title.lenth > 0)
             .map(({ node: post }) => { 
               return (
-
                 <div className="views-row views-row-1 views-row-odd views-row-first">
                   <div key={post.id} className="node node-historical-content node-teaser clearfix" about={post.frontmatter.path} typeof="sioc:Item foaf:Document">
                     <h2 property="dc:title" datatype="">
