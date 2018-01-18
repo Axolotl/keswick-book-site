@@ -32,7 +32,7 @@ const Sidebar = () => (
                     <li className="last leaf menu-mlid-576"><a href="/ongoing-conversation/stories1999-present">1999-present</a></li>
                   </ul>
                 </li>
-                <li className="leaf menu-mlid-393"><a href="/node/add/historical-content" title="Add Your Own">Add Your Own</a></li>
+                <li className="leaf menu-mlid-393"><a href="/add-content" title="Add Your Own">Add Your Own</a></li>
                 <li className="leaf menu-mlid-395"><a href="http://www.keswick.com" title="Visit and make new memories">Make a Reservation at Keswick Hall</a></li>
                 <li className="last leaf menu-mlid-616"><a href="/authorinfo">About the Author</a></li>
               </ul>
