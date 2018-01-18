@@ -4,17 +4,17 @@ import Link from 'gatsby-link'
 import bookimage from '../images/content/k-book-purchase_0.jpg'
 
 const PurchasePage = () => (
-  <div class="content">
-    <div class="field field-name-field-page-image field-type-image field-label-hidden">
-      <div class="field-items">
-        <div class="field-item even">
-          <img typeof="foaf:Image" src={bookimage} alt="" />
+  <div className="node-type-product-display content">
+    <div className="field field-name-field-page-image field-type-image field-label-hidden">
+      <div className="field-items">
+        <div className="field-item even">
+          <img id="borderless" typeof="foaf:Image" src={bookimage} alt="" />
         </div>
       </div>
     </div>
-    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-      <div class="field-items">
-        <div class="field-item even" property="content:encoded">
+    <div className="field field-name-body field-type-text-with-summary field-label-hidden">
+      <div className="field-items">
+        <div className="field-item even" property="content:encoded">
           <p>The Story of Keswick Hall weaves first hand accounts and archival documentation together with more than 150 images and photographs (many never before published). This high quality, 163-page, hardcover, cloth-bound book with glossy dust jacket is perfect for anyone who has ever been to this fascinating property -- whether recently or many years ago -- or for anyone who dreams about visiting.</p>
           <div id="available-soon">
             <h5>Available Now</h5>

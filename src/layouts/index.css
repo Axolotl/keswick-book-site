@@ -100,7 +100,7 @@ p + p {
   display: block;
   margin: 25px auto 30px;
 }
-.node-type-product-display #content img {
+.node-type-product-display img#borderless{
   border: none;
   margin: 0 auto 35px;
   display: block;
