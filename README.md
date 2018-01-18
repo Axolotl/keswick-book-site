@@ -1,9 +1,6 @@
 ## The Story of Keswick Hall  
----
 
-A rebuild based off of data collected from Wayback Machine (html, styles, images) using Gatsby. 
-
----
+A rebuild based off of data collected from Wayback Machine (html, styles, images) using Gatsby.  
 
 Info for Gatsby deployment below:  
 
