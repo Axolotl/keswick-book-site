@@ -1,4 +1,4 @@
- ---
+---
 path: /content/bob-reid-98
 date: 1999-present
 title: Bob Reid at 98
