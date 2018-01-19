@@ -3,6 +3,7 @@ path: /content/my-first-shirley-temple
 year: 1965-1972
 title: My First Shirley Temple
 author: Ellen Welch
+dateadded: 24
 ---
 
 I enjoyed the book so much that I would like to get copies for my family. I still have a Keswick Club of Virginia racquet cover and my [membership] pin. I can also remember when I first overcame my fears and jumped off the diving board. I also remember sitting at the top overview near the locker room and watching over the lower pool. We also used to go the Hunt room for Sunday lunch every week. I had my first Shirley Temple in the bar. 

@@ -1,19 +1,19 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+{/*.filter(post => post.node.frontmatter.title.lenth > 0)*/}
+
 export default function OngoingConversation({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
-  console.log(posts);
   return (
     <div className="content node-type-historical-content">
       <div className="view view-ongoing-conversation view-id-ongoing_conversation view-display-id-page view-dom-id-1">
         <div className="view-content">
           {posts
-            .filter(post => post.node.frontmatter.title.lenth > 0)
             .map(({ node: post }) => { 
               return (
-                <div className="views-row views-row-1 views-row-odd views-row-first">
-                  <div key={post.id} className="node node-historical-content node-teaser clearfix" about={post.frontmatter.path} typeof="sioc:Item foaf:Document">
+                <div key={post.id} className="views-row views-row-1 views-row-odd views-row-first">
+                  <div className="node node-historical-content node-teaser clearfix" about={post.frontmatter.path} typeof="sioc:Item foaf:Document">
                     <h2 property="dc:title" datatype="">
                       <a href={post.frontmatter.path}>{post.frontmatter.title}</a>
                     </h2>
@@ -34,7 +34,7 @@ export default function OngoingConversation({ data }) {
 
                     <ul className="links inline">
                       <li className="node-readmore first last">
-                        <a href={post.frontmatter.path} rel="tag" title={post.frontmatter.title}>Read more<span className="element-invisible"> about {post.frontmatter.title}</span></a>
+                        <a href={post.frontmatter.path} rel="tag" title={post.frontmatter.title}>Read more</a>
                       </li>
                     </ul>
 
@@ -52,7 +52,7 @@ export default function OngoingConversation({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___year] }) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___dateadded] }) {
       edges {
         node {
           excerpt(pruneLength: 250)

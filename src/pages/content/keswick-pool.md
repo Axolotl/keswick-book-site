@@ -3,6 +3,7 @@ path: /content/keswick-pool
 year: 1947-1965
 title: Keswick Pool
 author: Suzanne S. Word
+dateadded: 4
 ---
 
 I remember fondly weekends at the pool with my Mother while Dad played golf.  We always had the umbrella that backed up to the 10th tee, directly across from the cabanas, and Dad and his foursome would walk the short distance up to the pool to say hello to their wives and children as they made the turn.  The "creek" at the bottom of the hill below the tee had marvelous things like tadpoles and such and we couldn't wait for the last golfer to pass so we could go down and explore!
@@ -13,4 +14,4 @@ I often wondered about the one column myself; another mystery yet to be solved! 
 
 I, of course, think "our era" was the most representative of Charlottesville.  It may have been unspoken, but we all seemed to feel Keswick was perfect for the types of folks that either weren't quite of the circumstance or "caliber" to afford or feel comfortable at Farmington or just had a more down-to-earth mentality/quality about them and enjoyed the type of camaraderie that only Keswick afforded.  When it closed, most of us did naturally gravitate to Farmington, but it was never the same.
 
-Suzanne S. Word (daughter of Helen &amp; Montie Smith)
+Suzanne S. Word (daughter of Helen & Montie Smith)

@@ -2,6 +2,7 @@
 path: /content/christmas-keswick-year-after-year
 year: 1990-1999
 title: Christmas at Keswick - Year After Year
+dateadded: 19
 ---
 
 My family has been coming to Keswick for Christmas every year since 1993. I just found my pictures of 1998. We’ve got a great picture of crows sunning themselves on the back exit fence.

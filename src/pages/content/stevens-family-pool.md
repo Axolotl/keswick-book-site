@@ -5,6 +5,7 @@ title: The Stevens Family at the Pool
 image: 
 imagetitle: Donald and Helena Stevens and children and friends
 author: Rosely Stevens
+dateadded: 7
 ---
 
 These photos, from the family photo album of Donald Stevens, were taken in 1952.

@@ -3,6 +3,7 @@ path: /content/traveling-keswicks-historic-roads
 year: pre-1912 through 1947
 title: Traveling Keswick’s Historic Roads
 publication: Arcadia Preservation, Keswick Life, Holiday 2004
+dateadded: 30
 ---
 
 The Keswick area, and Albemarle County as a whole, is unusually blessed with an impressively intact system of historic roads. While roads are often seen a mundane, they are in fact one of the main forces that determines how a region develops. Throughout its approximately 270-year history, the roads that have developed in the Keswick region have been directly responsible for much of Keswick’s present appearance. … Historic roads were almost always built in order to connect two existing destinations using the shortest possible route, and the early roads in Keswick were often built to provide routes for moving plantation products (mostly tobacco and wheat) to ports along the major rivers of the region.

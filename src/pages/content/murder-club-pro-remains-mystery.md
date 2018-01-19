@@ -5,6 +5,7 @@ title: Murder of Club Pro Remains a Mystery
 image: 
 imagetitle: Murder of Club Pro Remains a  Mystery
 author: Avery Chenoweth
+dateadded: 16
 ---
 
 By Avery Chenoweth, Published in the Charlottesville Observer, May 29- June 3, 1992

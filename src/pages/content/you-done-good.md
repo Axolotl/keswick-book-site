@@ -3,6 +3,7 @@ path: /content/you-done-good
 year: 1999-present
 title: You done good.
 author: Howard Leighton, Underhill, Vermont
+dateadded: 13
 ---
 
 WOW!!! What a nice book you have created. I haven't had time to read it all, but it is beautiful. You done good. Very good.
