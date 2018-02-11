@@ -1,26 +1,19 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import logo from '../../images/design/logo-light_2.png'
+import Logo from '../Logo';
 
 const Sidebar = () => (
   <div id="sidebar" className="column sidebar">
     <div className="section">
-
-      <div id="logo">
-        <div className="section clearfix">
-          <a id="logo" href="/" title="Home" rel="home">
-            <img src={logo} alt="Home" />
-          </a>
-        </div>
-      </div>
+      <Logo />
 
       <div className="region region-sidebar-first">
         <div id="block-menu-block-1" className="block block-menu-block">
 
           <div className="content">
             <div className="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1">
-              <ul classNameName="menu">
+              <ul className="menu">
                 <li className="first leaf menu-mlid-394"><a href="/purchase" title="Purchase a copy of the book">Purchase a Copy</a></li>
                 <li className="expanded menu-mlid-392"><a href="/ongoing-conversation" title="">An Ongoing Conversation: More Stories and Images</a>
                   <ul className="menu">

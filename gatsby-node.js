@@ -40,8 +40,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPaginatedPages({
         edges: result.data.allMarkdownRemark.edges,
         createPage: createPage,
-        pageTemplate: "src/templates/template.js",
-        pageLength: 10
+        pageTemplate: "src/templates/paginate.js",
+        pageLength: 10,
+        // this generates the page in place of pages/ongoing-conversation.js
+        pathPrefix: "ongoing-conversation",
       });
 
       result.data.allMarkdownRemark.edges

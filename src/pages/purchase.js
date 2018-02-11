@@ -3,6 +3,18 @@ import Link from 'gatsby-link'
 
 import bookimage from '../images/content/k-book-purchase_0.jpg'
 
+// need an updated image, and to know whether this still even works
+function PaypalButton() {
+  return (
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="55RPJK8XVPS48" />
+      <input type="image" src="http://www.negativev.com/photos/buynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+      <img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  )
+}
+
 const PurchasePage = () => (
   <div className="node-type-product-display content">
     <div className="field field-name-field-page-image field-type-image field-label-hidden">
@@ -18,14 +30,6 @@ const PurchasePage = () => (
           <p>The Story of Keswick Hall weaves first hand accounts and archival documentation together with more than 150 images and photographs (many never before published). This high quality, 163-page, hardcover, cloth-bound book with glossy dust jacket is perfect for anyone who has ever been to this fascinating property -- whether recently or many years ago -- or for anyone who dreams about visiting.</p>
           <div id="available-soon">
             <h5>Available Now</h5>
-            {/*BEGIN PAYPAL BUTTON*/}
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-              <input type="hidden" name="cmd" value="_s-xclick" />
-              <input type="hidden" name="hosted_button_id" value="55RPJK8XVPS48" />
-              <input type="image" src="http://www.negativev.com/photos/buynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-              <img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-            {/*END PAYPAL BUTTON*/}
           </div>
           <div id="ordering-options">
             <h5>Options for ordering now include both snail mail and online ordering:</h5>
