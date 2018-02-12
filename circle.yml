@@ -1,0 +1,90 @@
+version: 2
+jobs:
+  build-job:
+    docker:
+      -image: circleci/node:8.9.3
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+        path:
+          - node_modules
+        key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      # Build
+      - run:
+        name: Compile gatsbyjs site
+        command: yarn build
+
+      - persist_to_workspace:
+        root: ./
+        paths:
+          - public
+
+  deploy-staging-job:
+    docker:
+      - image: circleci/node:8.9.3
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+        at: ./
+      - add_ssh_keys
+      - run:
+        name: sync s3 bucket
+        command: aws s3 sync public s3://$STAGING_BUCKET --delete
+
+  deploy-production-job:
+    docker:
+      - image: circleci/node:8.9.3
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+        at: ./
+      - add_ssh_keys
+      - run:
+        name: sync s3 bucket
+        command: aws s3 sync public s3://$PRODUCTION_BUCKET --delete
+      - run:
+        name: set up cloudfront
+        command: aws configure set preview.cloudfront true
+      - run:
+        name: invalidate cloudfront
+        command: aws cloudfront create-invalidation --distribution-id $PRODUCTION_CLOUDFRONT_DISTRIBUTION --paths "/*"
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build-job:
+        filters:
+          branches:
+            only:
+              - master
+              - develop
+      - deploy-staging-job:
+        filters:
+          tags:
+            only: /staging-.*/
+        requires:
+          - build-job
+      - deploy-prod-job:
+        filters:
+          tags:
+            only: /production-.*/
+        requires:
+          - build-job
