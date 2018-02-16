@@ -4,7 +4,9 @@ import Helmet from 'react-helmet'
 
 import Sidebar from '../components/Sidebar'
 
-//import './defaults.css'
+// import css files
+// system.css needs to be loaded first otherwise it will frell with index.css
+import './system.css'
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
