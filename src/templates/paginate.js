@@ -84,15 +84,6 @@ function PaginationControls({ pathContext }) {
                   </li>
           )}
 
-
-          {/*<li className="pager-item">
-            <a href="/ongoing-conversation" title="Go to page 1" className="active">1</a>
-          </li>
-          <li className="pager-current">2</li>
-          <li className="pager-item">
-            <a href="/ongoing-conversation?page=2" title="Go to page 3" className="active">3</a>
-          </li>*/}
-
           <li className="pager-next">
             <NavLink test={last} url={nextUrl} text={"next ›"} title={"Go to next page"} className={"active"} />
           </li>
