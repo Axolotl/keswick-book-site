@@ -26,16 +26,3 @@ export default function Template({ data }) {
     </div>
   );
 }
-
-export const pageQuery = graphql`
-  query PostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        year
-        title
-      }
-    }
-  }
-`;
