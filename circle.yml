@@ -43,16 +43,12 @@ jobs:
       - run:
           name: Install aws cli
           command: sudo apt-get -y -qq install awscli
-      # Set the signature version for the S3 auth
-      - run:
-          name: Setting Signature Version 4 for S3 Request Authentication
-          command: aws configure set default.s3.signature_version s3v4
       - attach_workspace:
           at: ./
       - add_ssh_keys
       - run:
           name: sync s3 bucket
-          command: aws s3 sync public s3://$STAGING_BUCKET --delete
+          command: aws --region us-east-1 s3 sync public s3://$STAGING_BUCKET --delete
 
   deploy-production-job:
     docker:
@@ -65,16 +61,12 @@ jobs:
       - run:
           name: Install aws cli
           command: sudo apt-get -y -qq install awscli
-      # Set the signature version for the S3 auth
-      - run:
-          name: Setting Signature Version 4 for S3 Request Authentication
-          command: aws configure set default.s3.signature_version s3v4
       - attach_workspace:
           at: ./
       - add_ssh_keys
       - run:
           name: sync s3 bucket
-          command: aws s3 sync public s3://$PRODUCTION_BUCKET --delete
+          command: aws --region us-east-1 s3 sync public s3://$PRODUCTION_BUCKET --delete
       - run:
           name: set up cloudfront
           command: aws configure set preview.cloudfront true
