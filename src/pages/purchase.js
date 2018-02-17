@@ -9,8 +9,8 @@ function PaypalButton() {
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
       <input type="hidden" name="cmd" value="_s-xclick" />
       <input type="hidden" name="hosted_button_id" value="55RPJK8XVPS48" />
-      <input type="image" src="http://www.negativev.com/photos/buynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-      <img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/scr/pixel.gif" width="1" height="1" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
     </form>
   )
 }
@@ -31,6 +31,7 @@ const PurchasePage = () => (
           <div id="available-soon">
             <h5>Available Now</h5>
           </div>
+          <PaypalButton />
           <div id="ordering-options">
             <h5>Options for ordering now include both snail mail and online ordering:</h5>
             <div id="ordering-options-mail">
