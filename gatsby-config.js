@@ -15,7 +15,26 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+        plugins: [
+          {
+            resolve: `gatsby-plugin-favicon`,
+            options: {
+              logo: "./src/images/design/paper-shoe-logo-2.png",
+              injectHTML: true,
+              icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: true,
+                coast: false,
+                favicons: true,
+                firefox: true,
+                twitter: false,
+                yandex: false,
+                windows: false
+              }
+            }
+          }
+        ]
       }
     },
   ]
