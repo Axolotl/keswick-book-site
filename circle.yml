@@ -66,7 +66,7 @@ jobs:
       - add_ssh_keys
       - run:
           name: sync s3 bucket
-          command: aws --region us-east-1 s3 sync public s3://$PRODUCTION_BUCKET --delete
+          command: aws --region us-east-2 s3 sync public s3://$PRODUCTION_BUCKET --delete
       - run:
           name: set up cloudfront
           command: aws configure set preview.cloudfront true
