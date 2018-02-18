@@ -94,13 +94,13 @@ workflows:
                 - develop
       - deploy-staging-job:
           filters:
-            tags:
-              only: /staging-.*/
+            branches:
+              only: develop
           requires:
             - build-job
       - deploy-production-job:
           filters:
             tags:
-              only: /production-.*/
+              only: /^production-.*/
           requires:
             - build-job
