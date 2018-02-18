@@ -90,7 +90,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
                 - develop
       - deploy-staging-job:
           filters:
@@ -98,6 +97,14 @@ workflows:
               only: develop
           requires:
             - build-job
+  tagged_build_and_deploy:
+    jobs:
+      - build-job-tagged:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production-.*/
       - deploy-production-job:
           filters:
             branches:
@@ -105,4 +112,4 @@ workflows:
             tags:
               only: /^production-.*/
           requires:
-            - build-job
+            - build-job-tagged
