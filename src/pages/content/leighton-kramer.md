@@ -2,9 +2,9 @@
 path: /content/leighton-kramer
 year: pre-1912 through 1947
 title: Leighton Kramer
-image:
+image: ../images/content/Kramer02_original.jpg
 imagetitle: Arizona Polo Association article by Leighton Kramer
-image2: 
+image2: ../images/content/LeightonKramer04a_original.jpg
 imagetitle2: Leighton Kramer
 dateadded: 27
 ---

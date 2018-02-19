@@ -2,7 +2,7 @@
 path: /content/diz-and-bills-lodge
 year: 1947-1965
 title: Diz and Bill's "lodge"
-image:
+image: ../images/content/Keswick Cabin P5_original.jpg
 imagetitle: My aunt and uncle by the fireplace inside the cabin
 author: Kim Gibbs
 dateadded: 10

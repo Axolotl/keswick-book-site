@@ -2,7 +2,7 @@
 path: /content/murder-club-pro-remains-mystery
 year: 1972-1990
 title: Murder of Club Pro Remains a Mystery
-image: 
+image: ../images/content/keswick murder article_original.jpg
 imagetitle: Murder of Club Pro Remains a  Mystery
 author: Avery Chenoweth
 dateadded: 16
