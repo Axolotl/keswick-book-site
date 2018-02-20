@@ -2,7 +2,7 @@
 path: /content/chuck-baker-rallies-win
 year: 1972-1990
 title: Chuck Baker Rallies to Win
-image: ../images/content/chuck baker_original.jpg
+image: ./images/chuck baker_original.jpg
 dateadded: 14
 ---
 

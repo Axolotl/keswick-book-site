@@ -289,6 +289,15 @@ body {
   font: 22px/1.5 "Dancing Script", serif;
   text-shadow:0 1px 0 rgba(0,45,28,0.5);
 }
+
+.node-type-historical-content .node .content .field-name-field-publication-name {
+  text-align: right;
+  padding: 0 20px;
+  margin: 20px 35px;
+  font: 18px/1.5 "Quattrocento", sans-serif;
+  text-shadow:0 1px 0 rgba(0,45,28,0.5);
+}
+
 .node ul.links {
   display: block;
   width: 70%;

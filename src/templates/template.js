@@ -18,9 +18,27 @@ export default function Template({ data }) {
             <div className="field-items">
               <div className="field-item even" property="content:encoded">
                 <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                {post.frontmatter.image && 
+                  <span>
+                    <br />
+                    <img src={post.frontmatter.image.childImageSharp.resize.src} title={post.frontmatter.imagetitle} />
+                  </span>
+                }
               </div>
             </div>
           </div>  
+          <div className="field field-name-field-user-name field-type-text field-label-hidden">
+            <div className="field-items">
+              <div className="field-item even">{post.frontmatter.author}
+              </div>
+            </div>
+          </div> 
+          <div className="field field-name-field-publication-name field-type-text field-label-hidden">
+            <div className="field-items">
+              <div className="field-item even">{post.frontmatter.publication}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -35,6 +53,16 @@ export const pageQuery = graphql`
           path
           year
           title
+          image {
+            childImageSharp {
+              resize(width: 400) {
+                src
+              }
+            }
+          }
+          imagetitle
+          author
+          publication
         }
     }
   }`

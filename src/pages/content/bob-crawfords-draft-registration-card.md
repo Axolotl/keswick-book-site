@@ -2,7 +2,7 @@
 path: /content/bob-crawfords-draft-resignation-card
 year: pre-1912 through 1947
 title: Draft Registration Card
-image: src/images/content/RB\ draft\ reg\ card\ with\ signature_original.jpg
+image: ./images/RB draft reg card with signature_original.jpg
 imagetitle: Bob Crawford's Draft Registration Card
 dateadded: 6
 ---

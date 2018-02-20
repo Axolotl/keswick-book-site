@@ -2,7 +2,7 @@
 path: /content/bob-reid-98
 year: 1999-present
 title: Bob Reid at 98
-image: ../../images/content/Bob Reid_original.JPG
+image: ./images/Bob Reid_original.JPG
 imagetitle: Bob and Patricia
 author: Patricia Castelli
 dateadded: 17
