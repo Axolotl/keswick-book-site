@@ -2,7 +2,7 @@
 path: /content/edie-ballard-kcc-trophy
 year: 1947-1965
 title: Edie Ballard with KCC trophy
-image:
+image: ./images/100_1583_original.JPG
 imagetitle: Edie Ballard
 dateadded: 9
 ---

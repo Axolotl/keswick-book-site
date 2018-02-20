@@ -2,7 +2,7 @@
 path: /content/keswick-club-ashtray
 year: 1965-1972
 title: Keswick Club ashtray
-image: 
+image: ./images/club ashtray_original.JPG
 imagetitle: Keswick Club ashtray
 dateadded: 28
 ---
