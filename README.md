@@ -1,7 +1,10 @@
 ## The Story of Keswick Hall  
 
-A rebuild based off of data collected from Wayback Machine (html, styles, images) using Gatsby.  
+A rebuild based off of data collected from Wayback Machine (html, styles, images) using Gatsby.
 
-Info for Gatsby deployment below:  
+### Deploying
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+CircleCI integrations will automatically build and deploy the site to AWS.
+
+1. To deploy to `staging.storyofkeswick.com`, commit to the `develop` branch.
+2. To deploy to `storyofkeswick.com` and invalidate the cloudfront distribution, tag any branch starting with `production-`.
