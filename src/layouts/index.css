@@ -262,6 +262,8 @@ body {
 }
 
 /* node styles for display in views */
+
+
 .node h2 {
   font: 20px/1.2 "Quattrocento", sans-serif;
   background: url("../images/design/disc-green.png") no-repeat scroll left center transparent;
@@ -269,6 +271,12 @@ body {
 }
 .node h2 a {
   text-decoration: none;
+  color: #002d1c;
+}
+
+h2.add-story-title {
+  font: 22px/1.2 "Quattrocento", sans-serif;
+  padding: 0 0 0 35px;
   color: #002d1c;
 }
 .node-type-historical-content .node .content .field-name-body, .node-type-historical-content .node .content .field-name-field-user-image, .views-row .node .content .field-name-body, .views-row .node .content .field-name-field-user-image {
