@@ -27,8 +27,8 @@ const PurchasePage = () => (
       <div id="ordering-options">
         <h5>Options for ordering now include both snail mail and online ordering:</h5>
         <div>
-          <p>Each book costs $40.00 plus 5% Virginia state tax (for Virginia residents only). That's $2.00 per book for tax.
-          p>Shipping costs are as follows:</p>
+          <p>Each book costs $40.00 plus 5% Virginia state tax (for Virginia residents only). That's $2.00 per book for tax.</p>
+          <p>Shipping costs are as follows:</p>
           <blockquote><p>Domestic Rate:<br /> 1-3 books: Add $4.00 for shipping<br />4-6 books: Add $8.00 for shipping<br />7-9 books: Add $12.00 for shipping<br />10+ books: Free shipping<br />International rate:<br />$5.00 per book standard shipping<br />$10.00 per book expedited shipping</p></blockquote>
           <p>1. Snail mail: send your full name, address, and phone number ( in case of questions) plus a check or money order payable to Paper Shoe Press to:</p>
           <blockquote><p>Paper Shoe Press<br />P.O.Box 792<br />Keswick, VA 22947</p></blockquote>

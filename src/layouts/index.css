@@ -283,6 +283,22 @@ h2.add-story-title {
 #ordering-options p {
   text-indent: 0;
 }
+#ordering-options {
+  margin: 15px 0 0;
+  font-family: "Quattrocento",serif;
+  background: none repeat scroll 0 0 #FFFFFF;
+  padding: 10px;  
+}
+#ordering-options > div {
+  margin: 0 0 20px 15px;
+}
+#ordering-options h5 {
+  font-style: italic;
+  font-weight: normal;
+}
+#ordering-options > h5 {
+  line-height: 36px;
+}
 
 /*paginate*/
 .node-type-historical-content .node .content .field-name-body, .node-type-historical-content .node .content .field-name-field-user-image, .views-row .node .content .field-name-body, .views-row .node .content .field-name-field-user-image {
