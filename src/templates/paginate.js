@@ -12,33 +12,26 @@ const NavLink = props => {
 
 function PostListItem({ node }) {
   return (
-    <div key={node.id} className="views-row views-row-1 views-row-odd views-row-first">
-      <div className="node node-historical-content node-teaser clearfix" about={node.frontmatter.path} typeof="sioc:Item foaf:Document">
-        <h2 property="dc:title" datatype="">
-          <a href={node.frontmatter.path}>{node.frontmatter.title}</a>
-        </h2>
-        <div className="content">
-          <div className="field field-name-field-timeframe field-type-list-text field-label-hidden">
-            <div className="field-items">
-              <div className="field-item even">{node.frontmatter.year}</div>
-            </div>
-          </div>
-          <div className="field field-name-body field-type-text-with-summary field-label-hidden">
-            <div className="field-items">
-              <div className="field-item even" property="content:encoded">
-                <p>{node.excerpt}</p>
-              </div>
-            </div>
-          </div>
+    <div key={node.id} className="views-row node">
+      <h2>
+        <a href={node.frontmatter.path}>{node.frontmatter.title}</a>
+      </h2>
+
+      <div className="content">
+        <div className="field-name-field-timeframe">
+          {node.frontmatter.year}
         </div>
+        <div className="field-name-body">
+          <p>{node.excerpt}</p>
+        </div>
+      </div>
 
-        <ul className="links inline">
-          <li className="node-readmore first last">
-            <a href={node.frontmatter.path} rel="tag" title={node.frontmatter.title}>Read more</a>
-          </li>
-        </ul>
+      <ul className="links inline">
+        <li>
+          <a href={node.frontmatter.path} title={node.frontmatter.title}>Read more</a>
+        </li>
+      </ul>
 
-      </div>  
     </div>
   );
 }
@@ -58,20 +51,18 @@ function PaginationControls({ pathContext }) {
 
   return (
     <div>
-
-      <h2 className="element-invisible">Pages</h2>
       <div className="item-list">
         <ul className="pager">
-          <li className="pager-first first">
+          <li>
             <NavLink test={first} url={firstUrl} text={"« first"} title={"Go to first page"} className={"active"} />
           </li>
-          <li className="pager-previous">
+          <li>
             <NavLink test={first} url={previousUrl} text={"‹ previous"} title={"Go to previous page"} className={"active"} />
           </li>
 
           {Array.from(Array(pageCount).keys()).map(key => 
               (key+1) != index ?
-                  <li className="pager-item">
+                  <li>
                     <NavLink 
                       test={false} 
                       url={pageUrls[key]} 
@@ -81,18 +72,16 @@ function PaginationControls({ pathContext }) {
                   </li> : 
                   <li className="pager-current">
                     <span>{key+1}</span>
-                  </li>
-          )}
+                  </li>)}
 
-          <li className="pager-next">
+          <li>
             <NavLink test={last} url={nextUrl} text={"next ›"} title={"Go to next page"} className={"active"} />
           </li>
-          <li className="pager-last last">
+          <li>
             <NavLink test={last} url={lastUrl} text={"last »"} title={"Go to last page"} className={"active"} />
           </li>
         </ul>
       </div>  
-
     </div>
   );
 }
@@ -102,18 +91,9 @@ const IndexPage = ({ data, pathContext }) => {
 
   return (
     <div>
-      <div className="content node-type-historical-content">
-        <div className="view view-ongoing-conversation view-id-ongoing_conversation view-display-id-page view-dom-id-1">
-          <div className="view-content">
-
-          {group.map(PostListItem)}
-
-          </div>
-        </div>
+      <div className="node-type-historical-content">
+        {group.map(PostListItem)}
       </div>
-
-    {/*testing where pagination controls should go in the div structure*/}
-
       <PaginationControls pathContext={pathContext} />
     </div>
   );

@@ -3,42 +3,33 @@ import React from 'react';
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   return (
-    <div className="content node-type-historical-content">
-      <div id="node-7" className="node node-historical-content clearfix" about={post.frontmatter.path} typeof="sioc:Item foaf:Document">
-        <h2 property="dc:title" datatype="">
+    <div className="node-type-historical-content">
+      <div className="node">
+        {/*something about the h2 a configuration is styled*/}
+        <h2>
           <a href={post.frontmatter.path}>{post.frontmatter.title}</a>
         </h2>
+        {/*this content is actually necessary for once*/}
         <div className="content">
-          <div className="field field-name-field-timeframe field-type-list-text field-label-hidden">
-            <div className="field-items">
-              <div className="field-item even">{post.frontmatter.year}</div>
-            </div>
+          <div className="field-name-field-timeframe">
+            {post.frontmatter.year}
           </div>
-          <div className="field field-name-body field-type-text-with-summary field-label-hidden">
-            <div className="field-items">
-              <div className="field-item even" property="content:encoded">
-                <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-                {post.frontmatter.image && 
-                  <span>
-                    <br />
-                    <img src={post.frontmatter.image.childImageSharp.resize.src} title={post.frontmatter.imagetitle} />
-                  </span>
-                }
-              </div>
-            </div>
-          </div>  
-          <div className="field field-name-field-user-name field-type-text field-label-hidden">
-            <div className="field-items">
-              <div className="field-item even">{post.frontmatter.author}
-              </div>
-            </div>
+          <div className="field-name-body">
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            {post.frontmatter.image && 
+              <span>
+                <br />
+                <img src={post.frontmatter.image.childImageSharp.resize.src} title={post.frontmatter.imagetitle} />
+              </span>}
           </div> 
-          <div className="field field-name-field-publication-name field-type-text field-label-hidden">
-            <div className="field-items">
-              <div className="field-item even">{post.frontmatter.publication}
-              </div>
-            </div>
-          </div>
+          {post.frontmatter.author &&
+            <div className="field-name-field-user-name">
+              {post.frontmatter.author}
+            </div>}
+          {post.frontmatter.publication &&
+            <div className="field-name-field-publication-name">
+              {post.frontmatter.publication}
+            </div>}
         </div>
       </div>
     </div>
