@@ -6,11 +6,11 @@ import Sidebar from '../components/Sidebar'
 
 // import css files
 // system.css needs to be loaded first otherwise it will frell with index.css
-import './system.css'
+
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div id="root">
     <Helmet
       title="The Story of Keswick Hall"
       meta={[
@@ -25,20 +25,8 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Sidebar />
-    <div id="content" className="column">
-      <div className="section">
-        <a id="main-content"></a>
-        <div className="tabs"></div> 
-        <div className="region region-content">
-          <div id="block-system-main" className="block block-system">
-            <div className="content">
-              <div id="node-1" className="node node-page clearfix" about="/content/homepage" typeof="foaf:Document">
-                {children()}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="content" className="node node-page" about="/content/homepage" typeof="foaf:Document">
+      {children()}
     </div>
   </div>
 )
