@@ -22,38 +22,32 @@ input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {
 input[type="search"] { -webkit-appearance: textfield; }
 input[type="submit"] { -webkit-appearance:none; }
 
-li.expanded, li.collapsed, li.leaf { padding: 0; }
+/*li.expanded, li.collapsed, li.leaf { padding: 0; }*/
 
-.gigantic {
-  font-size: 110px;
-  line-height: 120px;
-  letter-spacing: -2px;
-}
-
-.huge, h1 {
+h1 {
   font-size: 68px;
   line-height: 72px;
   letter-spacing: -1px;
 }
 
-.large, h2 {
+h2 {
   font-size: 42px;
   line-height: 48px;
 }
 
-.bigger, h3 {
+h3 {
   font-size: 26px;
   line-height: 36px;
 }
 
-.big, h4 {
+h4 {
   font-size: 22px;
   line-height: 30px;
 }
 
-.medium, h5 {
-        font-size: 16px;
-        line-height: 24px;
+h5 {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 body {
@@ -86,8 +80,8 @@ img::-moz-selection {background: transparent;}
 body {-webkit-tap-highlight-color: rgb(255,255,158);}
 
 body {
-  width: 944px;
-  padding: 0 48px 84px 0;
+  /*width: 944px;*/
+  /*padding: 0 48px 84px 0;*/
   background: rgb(232,232,232);
   color: rgb(60,60,60);
   -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
@@ -97,20 +91,22 @@ blockquote {
   margin: 5px 0 5px 30px;
 }
 
+/* this section to be deleted? */
+/*
 ul.menu {
   border: none;
   list-style: none;
-  text-align: left; /* LTR */
+  text-align: left; 
 }
 ul.menu li {
-  margin: 0 0 0 0.5em; /* LTR */
+  margin: 0 0 0 0.5em; 
 }
 ul li.expanded {
   list-style-image: url(../images/design/menu-expanded.png);
   list-style-type: circle;
 }
 ul li.collapsed {
-  list-style-image: url(../images/design/menu-collapsed.png); /* LTR */
+  list-style-image: url(../images/design/menu-collapsed.png); 
   list-style-type: disc;
 }
 ul li.leaf {
@@ -120,7 +116,7 @@ ul li.leaf {
 li.expanded,
 li.collapsed,
 li.leaf {
-  padding: 0.2em 0.5em 0 0; /* LTR */
+  padding: 0.2em 0.5em 0 0; 
   margin: 0;
 }
 li a.active {
@@ -129,24 +125,37 @@ li a.active {
 td.menu-disabled {
   background: #ccc;
 }
+*/
 
 /*specific*/
 
 /*layouts/index*/
+#root {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#content {
+  display: block;
+  max-width: 620px;
+  min-width: 300px;
+  float: right;
+  padding: 50px 0 50px 0;
+  margin: 0 40px 0 40px;
+}
+
 #content img {
   border: 1px solid #3C3C3C;
 }
+
 #content .separator img {
   border: none;
   display: block;
   margin: 25px auto 30px;
 }
-#content {
-  display: block;
-  width: 620px;
-  float: right;
-  padding: 52px 0 450px 0;
-}
+
+/*node-page is necessary for lists on main pages*/
 .node-page ul {
   padding: 20px;
 }
@@ -155,6 +164,7 @@ td.menu-disabled {
   text-indent: 1.5em;
   margin: 3px 0;
 }
+
 
 /*components/logo*/
 #logo img {
@@ -168,12 +178,23 @@ li.expanded ul {
 li.expanded:hover ul, li.expanded.active-trail ul {
   display: block;
 }
+
+body, #___gatsby, #root, #sidebar {
+  /*min-height: 100%; / *extends menu to bottom of screen*/
+  min-height: calc(100vh - 72px);
+}
+
+
 #sidebar {
-  width: 252px;
+  /*experiment*/
+  /*max-height:520px;*/
+
+
+  max-width: 252px;
+  min-width: 200px;
   padding: 50px 24px 0 24px;
   margin: 22px 0 0;
-  position: fixed;
-  height: 100%;
+
   overflow: auto;
   background: url("../images/design/green-texture.png") repeat scroll 0 0 transparent;  border-radius:0 5px 0 0;
   -moz-border-radius:0 5px 0 0;

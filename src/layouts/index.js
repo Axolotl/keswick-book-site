@@ -10,7 +10,7 @@ import Sidebar from '../components/Sidebar'
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div id="root">
     <Helmet
       title="The Story of Keswick Hall"
       meta={[
