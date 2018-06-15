@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 export default function Template({ data }) {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
   return (
     <div className="node-type-historical-content">
       <div className="node">
@@ -16,44 +16,51 @@ export default function Template({ data }) {
           </div>
           <div className="field-name-body">
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            {post.frontmatter.image && 
+            {post.frontmatter.image && (
               <span>
                 <br />
-                <img src={post.frontmatter.image.childImageSharp.resize.src} title={post.frontmatter.imagetitle} />
-              </span>}
-          </div> 
-          {post.frontmatter.author &&
+                <img
+                  src={post.frontmatter.image.childImageSharp.resize.src}
+                  title={post.frontmatter.imagetitle}
+                />
+              </span>
+            )}
+          </div>
+          {post.frontmatter.author && (
             <div className="field-name-field-user-name">
               {post.frontmatter.author}
-            </div>}
-          {post.frontmatter.publication &&
+            </div>
+          )}
+          {post.frontmatter.publication && (
             <div className="field-name-field-publication-name">
               {post.frontmatter.publication}
-            </div>}
+            </div>
+          )}
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export const pageQuery = graphql`
   query PostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-        frontmatter {
-          path
-          year
-          title
-          image {
-            childImageSharp {
-              resize(width: 400) {
-                src
-              }
+      frontmatter {
+        path
+        year
+        title
+        image {
+          childImageSharp {
+            resize(width: 400) {
+              src
             }
           }
-          imagetitle
-          author
-          publication
         }
+        imagetitle
+        author
+        publication
+      }
     }
-  }`
+  }
+`

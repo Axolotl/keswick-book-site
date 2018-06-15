@@ -4,9 +4,6 @@ import Helmet from 'react-helmet'
 
 import Sidebar from '../components/Sidebar'
 
-// import css files
-// system.css needs to be loaded first otherwise it will frell with index.css
-
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
@@ -18,14 +15,35 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
       link={[
-        { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Quattrocento" },
-        { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Nobile" },
-        { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Vollkorn" },
-        { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Dancing+Script" },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://fonts.googleapis.com/css?family=Quattrocento',
+        },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://fonts.googleapis.com/css?family=Nobile',
+        },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://fonts.googleapis.com/css?family=Vollkorn',
+        },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://fonts.googleapis.com/css?family=Dancing+Script',
+        },
       ]}
     />
     <Sidebar />
-    <div id="content" className="node node-page" about="/content/homepage" typeof="foaf:Document">
+    <div
+      id="content"
+      className="node node-page"
+      about="/content/homepage"
+      typeof="foaf:Document"
+    >
       {children()}
     </div>
   </div>
