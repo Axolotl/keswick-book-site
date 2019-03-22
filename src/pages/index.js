@@ -49,7 +49,7 @@ const IndexPage = () => (
         private residence of five different owners, then took a 42-year roller
         coaster ride as a country club with ups and downs of both membership and
         drama, and since 1993 has been the historic wing of Keswick Hall, a
-        world-className resort that draws visitors from around the world.
+        world-class resort that draws visitors from around the world.
       </p>
       <p>
         The Story of Keswick Hall is a book that weaves first hand accounts and
